@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Preescolar Carlos Pellicer Cámara</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Cargando fuentes desde google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Arima+Madurai:700" rel="stylesheet">
+    <!--Cargando Font Awesome-->
+    <link rel="stylesheet" href="/stylesheets/font-awesome.min.css">
+
+    <!--Cargando <archivos-->
+    <link rel="stylesheet" href="/stylesheets/bootstrap.css">
+    <link rel="stylesheet" href="/stylesheets/estilos.css">
+
+</head>
+
+<body>
+
+
+
+    <section id="bienvenido">
+        <header class="encabezado fixed-top" role="banner">
+            <div class="container">
+                <a href="/views/index" class="logo">
+                    <img src="/images/logo.svg" alt="Logo Preescolar Carlos Pellicer Cámara" id="logo">
+                </a>
+
+                <button type="button" class="boton-sign-in hidden-lg-up" data-toggle="collapse" data-target="#bloque-buscar" aria-expanded="false">
+                    <i class="fa fa-sign-in" aria-hidden="true"></i>
+                </button>
+
+                <button type="button" class="boton-menu hidden-lg-up" data-toggle="collapse" data-target="#menu-principal" aria-expanded="false">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </button>
+
+                <form action="" id="bloque-buscar" class="collapse">
+                    <div class="container form-group">
+                        <p class="text-left">Introduzca sus datos:</p>
+                        <input type="email" class="form-control" id="inputuser" placeholder="Usuario">
+                        <input type="password" class="form-control" id="inputpassword" placeholder="Contraseña">
+                        <input type="submit" value="Entrar" class="btn btn-primary btn-block">
+                    </div>
+                </form>
+
+                <nav id="menu-principal" class="collapse">
+                    <ul class="menu-principal">
+                        <% if (page ==='index'){ %>
+                            <li class="active"><a href="/index">Inicio</a></li>
+                            <li><a href="/nosotros">Nosotros</a></li>
+                            <li><a href="/contacto">Contacto</a></li>
+                            <li><a href="/cursos">Cursos</a></li>
+                            <li><a href="/blog">Blog</a></li>
+                            <li><a href="/blog" class="hidden-md-down" data-toggle="collapse" data-target="#bloque-buscar" aria-expanded="false">Iniciar Sesión</a></li>
+                            <% } else if (page === 'nosotros') { %>
+                                <li><a href="/index">Inicio</a></li>
+                                <li class="active"><a href="/nosotros">Nosotros</a></li>
+                                <li><a href="/contacto">Contacto</a></li>
+                                <li><a href="/cursos">Cursos</a></li>
+                                <li><a href="/blog">Blog</a></li>
+                                <li><a href="/blog" class="hidden-md-down" data-toggle="collapse" data-target="#bloque-buscar" aria-expanded="false">Iniciar Sesión</a></li>
+
+                                <% } else if (page === 'contacto') { %>
+                                    <li><a href="/index">Inicio</a></li>
+                                    <li><a href="/nosotros">Nosotros</a></li>
+                                    <li class="active"><a href="/contacto">Contacto</a></li>
+                                    <li><a href="/cursos">Cursos</a></li>
+                                    <li><a href="/blog">Blog</a></li>
+                                    <li><a href="/blog" class="hidden-md-down" data-toggle="collapse" data-target="#bloque-buscar" aria-expanded="false">Iniciar Sesión</a></li>
+                                    <% } else if (page === 'cursos'){ %>
+                                      <li><a href="/index">Inicio</a></li>
+                                      <li><a href="/nosotros">Nosotros</a></li>
+                                      <li><a href="/contacto">Contacto</a></li>
+                                      <li  class="active"><a href="/cursos">Cursos</a></li>
+                                      <li><a href="/blog">Blog</a></li>
+                                      <li><a href="/blog" class="hidden-md-down" data-toggle="collapse" data-target="#bloque-buscar" aria-expanded="false">Iniciar Sesión</a></li>
+
+                                    <% }%>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </section>

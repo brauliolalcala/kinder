@@ -1,0 +1,5 @@
+# Eliminamos la carpeta de sass
+/public/stylesheets/scss
+
+#Configuramos la carpeta de modulos
+/node_modules
