@@ -16,7 +16,12 @@
 
     <!--Cargando <archivos-->
     <link rel="stylesheet" href="/stylesheets/bootstrap.css">
-    <link rel="stylesheet" href="/stylesheets/estilos.css">
+
+    <!-- Incluimos todos los estilos que se quieran agregar-->
+    <% for (var i = 0; i < estilos.length; i++) { %>
+        <link rel="stylesheet" href="<%= estilos[i] %>">
+    <% } %>
+
 
 </head>
 
@@ -27,7 +32,7 @@
     <section id="bienvenido">
         <header class="encabezado fixed-top" role="banner">
             <div class="container">
-                <a href="/views/index" class="logo">
+                <a href="/index" class="logo">
                     <img src="/images/logo.svg" alt="Logo Preescolar Carlos Pellicer Cámara" id="logo">
                 </a>
 
@@ -73,14 +78,14 @@
                                     <li><a href="/blog">Blog</a></li>
                                     <li><a href="/blog" class="hidden-md-down" data-toggle="collapse" data-target="#bloque-buscar" aria-expanded="false">Iniciar Sesión</a></li>
                                     <% } else if (page === 'cursos'){ %>
-                                      <li><a href="/index">Inicio</a></li>
-                                      <li><a href="/nosotros">Nosotros</a></li>
-                                      <li><a href="/contacto">Contacto</a></li>
-                                      <li  class="active"><a href="/cursos">Cursos</a></li>
-                                      <li><a href="/blog">Blog</a></li>
-                                      <li><a href="/blog" class="hidden-md-down" data-toggle="collapse" data-target="#bloque-buscar" aria-expanded="false">Iniciar Sesión</a></li>
+                                        <li><a href="/index">Inicio</a></li>
+                                        <li><a href="/nosotros">Nosotros</a></li>
+                                        <li><a href="/contacto">Contacto</a></li>
+                                        <li class="active"><a href="/cursos">Cursos</a></li>
+                                        <li><a href="/blog">Blog</a></li>
+                                        <li><a href="/blog" class="hidden-md-down" data-toggle="collapse" data-target="#bloque-buscar" aria-expanded="false">Iniciar Sesión</a></li>
 
-                                    <% }%>
+                                        <% }%>
                     </ul>
                 </nav>
             </div>

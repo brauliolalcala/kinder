@@ -1,71 +1,14 @@
-<!DOCTYPE html>
-<html lang="es">
+<% include header.ejs %>
 
-<head>
-    <title>Preescolar Carlos Pellicer Cámara</title>
-
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Cargando fuentes desde google fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,700i" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Arima+Madurai:700" rel="stylesheet">
-    <!--Cargando Font Awesome-->
-    <link rel="stylesheet" href="/stylesheets/font-awesome.min.css">
-
-    <!--Cargando <archivos-->
-    <link rel="stylesheet" href="/stylesheets/bootstrap.css">
-    <link rel="stylesheet" href="/stylesheets/estilos-contacto.css">
-
-</head>
-
-<body>
-
-
-
-    <section class="imagen-contacto" id="bienvenido">
-        <header class="encabezado fixed-top" role="banner">
-            <div class="container">
-                <a href="/index" class="logo">
-                    <img src="/images/logo.svg" alt="Logo Preescolar Carlos Pellicer Cámara" id="logo">
-                </a>
-
-                <button type="button" class="boton-sign-in hidden-lg-up" data-toggle="collapse" data-target="#bloque-buscar" aria-expanded="false">
-                    <i class="fa fa-sign-in" aria-hidden="true"></i>
-                </button>
-
-                <button type="button" class="boton-menu hidden-lg-up" data-toggle="collapse" data-target="#menu-principal" aria-expanded="false">
-                    <i class="fa fa-bars" aria-hidden="true"></i>
-                </button>
-
-                <form action="" id="bloque-buscar" class="collapse">
-                    <div class="container form-group">
-                        <p class="text-left">Introduzca sus datos:</p>
-                        <input type="email" class="form-control" id="inputuser" placeholder="Usuario">
-                        <input type="password" class="form-control" id="inputpassword" placeholder="Contraseña">
-                        <input type="submit" value="Entrar" class="btn btn-primary btn-block">
-                    </div>
-                </form>
-
-                <nav id="menu-principal" class="collapse">
-                    <ul class="menu-principal">
-                        <li><a href="/index">Inicio</a></li>
-                        <li><a href="/nosotros">Nosotros</a></li>
-                        <li class="active"><a href="/contacto">Contacto</a></li>
-                        <li><a href="/cursos">Cursos</a></li>
-                        <li><a href="/blog">Blog</a></li>
-                        <li><a href="/blog" class="hidden-md-down" data-toggle="collapse" data-target="#bloque-buscar" aria-expanded="false">Iniciar Sesión</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
+    <section class="imagen-contacto">
 
         <div class="container texto-encabezado">
             <h2>Contactanos</h2>
             <p>Haz una pregunta o agenda una cita</p>
         </div>
+
     </section>
+
 
     <section>
         <div class="container formulario">
@@ -74,17 +17,17 @@
         </div>
 
         <div class="container inicio-formulario">
-            <form class="formulario-letras">
+            <form class="formulario-letras" action="/contacto/send" method="post">
                 <div class="form-group row">
                     <label for="nombre-padre" class="col-sm-2 form-control-label">Nombre del Tutor</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="nombre-padre">
+                        <input type="text" class="form-control" name="nombre_padre">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="nombre-alumno" class="col-sm-2 form-control-label">Nombre del Alumno</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="nombre-alumno">
+                        <input type="text" class="form-control" name="nombre_alumno">
                     </div>
                 </div>
                 <div class="container form-en-linea text-center">
@@ -95,12 +38,12 @@
                         <div class="form-check form-check-inline">
 
                             <label class="form-check-label">
-                                <input class="form-check-input" name="alumno-insitucion" type="radio" value="si">Si
+                                <input class="form-check-input" name="alumno_insitucion" type="radio" value="si">Si
                             </label>
                         </div>
                         <div class="form-check form-check-inline">
                             <label class="form-check-label">
-                                <input class="form-check-input" type="radio" value="no" name="alumno-insitucion" style="margin-left: 3rem">No
+                                <input class="form-check-input" type="radio" value="no" name="alumno_insitucion" style="margin-left: 3rem">No
                             </label>
                         </div>
                     </div>
@@ -108,25 +51,25 @@
                 <div class="form-group row">
                     <label for="email" class="col-sm-2 form-control-label">Correo</label>
                     <div class="col-sm-10">
-                        <input type="email" class="form-control" id="email">
+                        <input type="email" class="form-control" name="email">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="nombre-alumno" class="col-sm-2 form-control-label">Teléfono</label>
                     <div class="col-sm-10">
-                        <input type="tel" class="form-control" id="telefono">
+                        <input type="tel" class="form-control" name="telefono">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="asunto" class="col-sm-2 form-control-label">Asunto</label>
                     <div class="col-sm-10">
-                        <input type="text" class="form-control" id="asunto">
+                        <input type="text" class="form-control" name="asunto">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="mensaje" class="col-sm-2 form-control-label">Mensaje</label>
                     <div class="col-sm-10">
-                        <textarea class="form-control" id="mensaje" rows="4"></textarea>
+                        <textarea class="form-control" name="mensaje" rows="4"></textarea>
                     </div>
                 </div>
                 <div class="row justify-content-end">
@@ -142,70 +85,9 @@
     <section>
 
         <div class="embed-responsive embed-responsive-16by9 mapa">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7443.986578918138!2d-101.58639102844195!3d21.11283370990585!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x22216aa29d25cf!2sPreescolar+Carlos+Pellicer+C%C3%A1mara!5e0!3m2!1ses!2smx!4v1487413858392" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7443.986578918138!2d-101.58639102844195!3d21.11283370990585!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x22216aa29d25cf!2sPreescolar+Carlos+Pellicer+C%C3%A1mara!5e0!3m2!1ses!2smx!4v1487413858392"
+                width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
     </section>
 
-
-
-
-    <footer class="pie-de-pagina py-3" role="footer">
-        <h4 class="h3 text-center font-weight-bold hidden-lg-up ">Preescolar Carlos Pellicer Cámara</h4>
-        <div class="container text-center text-lg-left">
-            <div class="row">
-
-                <div class="col-lg-4">
-                    <p>De la Espátula #102 Col. Paraíso Real C.P. 37294</p>
-                    <p>León, Guanajuato, México</p>
-
-                    <i class="fa fa-envelope" aria-hidden="true"></i>
-                    <a href="mailto:preecarlos_pellicer@hotmail.com">preecarlos_pellicer@hotmail.com</a>
-
-                    <br>
-
-                    <i class="fa fa-phone hidden-md-down" aria-hidden="true"></i>
-                    <a href="tel::+524773915488" class="hidden-md-down">(477) 391 54 88</a>
-
-
-                    <div class="row hidden-lg-up">
-                        <div class="col-12 boton-telefono">
-                            <a href="tel:+524773915488">
-                                <button class="telefono text-center btn btn-primary btn-lg">
-                                    <span class="fa fa-phone align-middle" aria-hidden="true"></span>
-                                    <span>(477) 391 54 88</span>
-                                </button>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <img src="/images/logo.svg" alt="Logo Preescolar Carlos Pellicer Cámara" class="hidden-md-down col-lg-4 ">
-
-                <ul class="col-lg-4 social">
-                    <div class="row">
-                        <li class="col-4">
-                            <a href="https://twitter.com/kinder_pellicer" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
-
-                        </li>
-                        <li class="col-4">
-                            <a href="https://www.facebook.com/kinderpellicer/" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
-                        </li>
-                        <li class="col-4">
-                            <a href="https://www.youtube.com/channel/UC9IadMO-N_qrKPKea8vV8Ew" target="_blank"><i class="fa fa-youtube-square" aria-hidden="true"></i></a>
-                        </li>
-                    </div>
-                </ul>
-
-
-            </div>
-        </div>
-    </footer>
-
-
-    <!--Cargando archivos JS-->
-    <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
-    <script src="/javascripts/jquery-3.1.1.min.js"></script>
-    <script src="/javascripts/bootstrap.min.js"></script>
-</body>
-
-</html>
+<% include footer.ejs %>
