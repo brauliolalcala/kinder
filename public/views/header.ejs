@@ -15,7 +15,9 @@
     <link rel="stylesheet" href="/stylesheets/font-awesome.min.css">
 
     <!--Cargando <archivos-->
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
     <link rel="stylesheet" href="/stylesheets/bootstrap.css">
+    <link rel="stylesheet" href="/stylesheets/animate.min.css">
 
     <!-- Incluimos todos los estilos que se quieran agregar-->
     <% for (var i = 0; i < estilos.length; i++) { %>
@@ -55,12 +57,12 @@
 
                 <nav id="menu-principal" class="collapse">
                     <ul class="menu-principal">
-                        <li class="<%= (page === "index") ? "active" : "" %>"><a href="/index">Inicio</a></li>
-                        <li class="<%= (page === "nosotros") ? "active" : "" %>"><a href="/nosotros">Nosotros</a></li>
-                        <li class="<%= (page === "contacto") ? "active" : "" %>"><a href="/contacto">Contacto</a></li>
-                        <li class="<%= (page === "cursos") ? "active" : "" %>"><a href="/cursos">Cursos</a></li>
-                        <li class="<%= (page === "blog") ? "active" : "" %>"><a href="/blog">Blog</a></li>
-                        <li class="<%= (page === "iniciar-sesion") ? "active" : "" %>"><a href="/iniciar-sesion" class="hidden-md-down" data-toggle="collapse" data-target="#bloque-buscar" aria-expanded="false">Iniciar Sesión</a></li>
+                        <li class="<%= (page === " index ") ? "active " : " " %>"><a href="/index">Inicio</a></li>
+                        <li class="<%= (page === " nosotros ") ? "active " : " " %>"><a href="/nosotros">Nosotros</a></li>
+                        <li class="<%= (page === " contacto ") ? "active " : " " %>"><a href="/contacto">Contacto</a></li>
+                        <li class="<%= (page === " cursos ") ? "active " : " " %>"><a href="/cursos">Cursos</a></li>
+                        <li class="<%= (page === " blog ") ? "active " : " " %>"><a href="/blog">Blog</a></li>
+                        <li class="<%= (page === " iniciar-sesion ") ? "active " : " " %>"><a href="/iniciar-sesion" class="hidden-md-down" data-toggle="collapse" data-target="#bloque-buscar" aria-expanded="false">Iniciar Sesión</a></li>
                     </ul>
                 </nav>
             </div>

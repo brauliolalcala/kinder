@@ -3,100 +3,104 @@
     <section class="imagen-contacto">
 
         <div class="container texto-encabezado">
-            <h2>Contactanos</h2>
-            <p>Haz una pregunta o agenda una cita</p>
+            <h2 class="wow bounceInDown">Contactanos</h2>
+            <p class="wow flipInX" data-wow-delay="0.6s">Haz una pregunta o agenda una cita</p>
         </div>
 
     </section>
 
     <section>
-        <% for (var i = 0; i < errors.length; i++) { %>
-            <div class="container danger">
+
+        <div class="container danger">
+            <% for (var i = 0; i < errors.length; i++) { %>
+
                 <ul class="list-group">
                     <li class="list-group-item list-group-item-action list-group-item-danger">
-                        <%= errors[i].msg %>
+                        <a href="#<%= errors[i].param %>">
+                            <%= errors[i].msg %>
+                        </a>
                     </li>
                 </ul>
-            </div>
-            <% } %>
+
+                <% } %>
+        </div>
 
 
-                <div class="container formulario">
-                    <h2 class="text-center font-weight-bold">Para nosotros tu eres lo más importante y nos gustaría ayudarte a resolver tus dudas.</h2>
+        <div class="container formulario">
+            <h2 class="text-center font-weight-bold">Para nosotros tu eres lo más importante y nos gustaría ayudarte a resolver tus dudas.</h2>
 
+        </div>
+
+        <div class="container inicio-formulario">
+            <form class="formulario-letras" action="/contacto/send" method="post">
+                <div class="form-group row " id="nombre_padre">
+                    <label for="nombre-padre" class="col-sm-2 form-control-label">Nombre del Tutor</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="nombre_padre">
+                    </div>
                 </div>
+                <div class="form-group row" id="nombre_alumno">
+                    <label for="nombre-alumno" class="col-sm-2 form-control-label">Nombre del Alumno</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="nombre_alumno">
+                    </div>
+                </div>
+                <div class="container form-en-linea text-center" id="alumno_institucion">
+                    <div class="pregunta">
+                        <p>¿Su hijo es alumno de nuestra institución?</p>
+                    </div>
+                    <div class="eleccion">
+                        <div class="form-check form-check-inline">
 
-                <div class="container inicio-formulario">
-                    <form class="formulario-letras" action="/contacto/send" method="post">
-                        <div class="form-group row ">
-                            <label for="nombre-padre" class="col-sm-2 form-control-label">Nombre del Tutor</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" name="nombre_padre">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="nombre-alumno" class="col-sm-2 form-control-label">Nombre del Alumno</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" name="nombre_alumno">
-                            </div>
-                        </div>
-                        <div class="container form-en-linea text-center">
-                            <div class="pregunta">
-                                <p>¿Su hijo es alumno de nuestra institución?</p>
-                            </div>
-                            <div class="eleccion">
-                                <div class="form-check form-check-inline">
-
-                                    <label class="form-check-label">
+                            <label class="form-check-label">
                                 <input class="form-check-input" name="alumno_insitucion" type="radio" value="si">Si
                             </label>
-                                </div>
-                                <div class="form-check form-check-inline">
-                                    <label class="form-check-label">
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">
                                 <input class="form-check-input" type="radio" value="no" name="alumno_insitucion" style="margin-left: 3rem">No
                             </label>
-                                </div>
-                            </div>
                         </div>
-                        <div class="form-group row">
-                            <label for="email" class="col-sm-2 form-control-label">Correo</label>
-                            <div class="col-sm-10">
-                                <input type="email" class="form-control" name="email">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="nombre-alumno" class="col-sm-2 form-control-label">Teléfono</label>
-                            <div class="col-sm-10">
-                                <input type="tel" class="form-control" name="telefono">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="asunto" class="col-sm-2 form-control-label">Asunto</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" name="asunto">
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="mensaje" class="col-sm-2 form-control-label">Mensaje</label>
-                            <div class="col-sm-10">
-                                <textarea class="form-control" name="mensaje" rows="4"></textarea>
-                            </div>
-                        </div>
-                        <div class="row justify-content-end">
-                            <button type="submit" class="btn btn-primary col-10">Enviar</button>
-                        </div>
-
-                    </form>
-
-                    <img src="/images/contacto-mujer.svg" alt="Nosotros resolveremos tus dudas" class="hidden-md-down">
+                    </div>
                 </div>
+                <div class="form-group row" id="email">
+                    <label for="email" class="col-sm-2 form-control-label">Correo</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" name="email">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="nombre-alumno" class="col-sm-2 form-control-label">Teléfono</label>
+                    <div class="col-sm-10">
+                        <input type="tel" class="form-control" name="telefono">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="asunto" class="col-sm-2 form-control-label">Asunto</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="asunto">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="mensaje" class="col-sm-2 form-control-label">Mensaje</label>
+                    <div class="col-sm-10">
+                        <textarea class="form-control" name="mensaje" rows="4"></textarea>
+                    </div>
+                </div>
+                <div class="row justify-content-end">
+                    <button type="submit" class="btn btn-primary col-10">Enviar</button>
+                </div>
+
+            </form>
+
+            <img src="/images/contacto-mujer.svg" alt="Nosotros resolveremos tus dudas" class="hidden-md-down">
+        </div>
     </section>
 
     <section>
 
         <div class="embed-responsive embed-responsive-16by9 mapa">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7443.986578918138!2d-101.58639102844195!3d21.11283370990585!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x22216aa29d25cf!2sPreescolar+Carlos+Pellicer+C%C3%A1mara!5e0!3m2!1ses!2smx!4v1487413858392"
-                width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7443.986578918138!2d-101.58639102844195!3d21.11283370990585!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x22216aa29d25cf!2sPreescolar+Carlos+Pellicer+C%C3%A1mara!5e0!3m2!1ses!2smx!4v1487413858392" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
     </section>
 

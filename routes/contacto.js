@@ -31,10 +31,10 @@ router.post('/send', function(req, res, next) {
 
 
     //Validando los elementos enviados
-    req.checkBody('nombre_padre', 'Este campo es obligatorio').notEmpty();
-    req.checkBody('email', 'Este campo es obligatorio').notEmpty();
-    req.checkBody('email', 'No es un correo válido').isEmail();
-    req.checkBody('alumno_insitucion', 'Este campo es obligatorio').notEmpty();
+    req.checkBody('nombre_padre', 'Por favor introduzca el nombre del padre o tutor').notEmpty();
+    req.checkBody('email', 'Por favor introduzca un correo').notEmpty();
+    req.checkBody('email', 'El correo especificado no es válido').isEmail();
+    req.checkBody('alumno_insitucion', 'Por favor conteste esta pregunta').notEmpty();
 
 
     var errors = req.validationErrors();

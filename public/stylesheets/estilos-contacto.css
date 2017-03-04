@@ -10,6 +10,7 @@ body {
   background: url("../images/fondo-contacto-libro.jpg") no-repeat center top;
   color: #fff;
   background-size: cover;
+  background-attachment: fixed;
   height: 50vh;
   display: -webkit-box;
   display: -webkit-flex;
@@ -177,6 +178,14 @@ ul.menu-principal {
   height: 25rem;
   margin: 4rem 0 4rem 0; }
 
+.danger {
+  margin-top: 4rem;
+  margin-bottom: 4rem; }
+
+.danger ul li a {
+  text-decoration: none;
+  color: #a94442; }
+
 /*------------------------
 Secci├│n Pie de P├ígina
 ------------------------*/
@@ -307,6 +316,7 @@ Para tama├▒o Medio (TABLET)
     background: url("../images/fondo-contacto-libro.jpg") no-repeat center top;
     color: #fff;
     background-size: cover;
+    background-attachment: fixed;
     height: 50vh;
     display: -webkit-box;
     display: -webkit-flex;

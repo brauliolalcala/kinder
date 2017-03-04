@@ -6,11 +6,10 @@ body {
   font-family: 'Open Sans', sans-serif;
   color: #111111; }
 
-.imagen-nosotros {
+.imagen-contacto {
   background: url("../images/fondo-nosotros-lg.jpg") no-repeat center top;
   color: #fff;
   background-size: cover;
-  background-attachment: fixed;
   height: 50vh;
   display: -webkit-box;
   display: -webkit-flex;
@@ -135,44 +134,6 @@ ul.menu-principal {
 #bloque-buscar input {
   margin-top: 10px; }
 
-.breadcrumb {
-  background: #1F89C7;
-  font-weight: bold; }
-
-.breadcrumb-item a {
-  text-decoration: none;
-  color: #fff; }
-
-.trabajamos h2 {
-  font-weight: bold; }
-
-.educacion .titulo {
-  border-top: 2px solid #1F89C7;
-  border-bottom: 2px solid #1F89C7;
-  margin: 1rem 0;
-  padding: 1rem 0; }
-
-.educacion .container h2 {
-  display: inline;
-  font-weight: bold; }
-
-ul p {
-  text-align: justify; }
-
-.educacion i {
-  font-size: 2rem;
-  margin-top: 2rem; }
-
-.educacion ul li {
-  list-style: none; }
-
-.educacion ul li h3 {
-  margin-top: 2rem;
-  text-decoration: underline; }
-
-.educacion p.text-justify {
-  margin-top: 2rem; }
-
 /*------------------------
 Secci├│n Pie de P├ígina
 ------------------------*/
@@ -292,7 +253,6 @@ Para tama├▒o Medio (TABLET)
     background: url("../images/fondo-nosotros-lg.jpg") no-repeat center top;
     color: #fff;
     background-size: cover;
-    background-attachment: fixed;
     height: 50vh;
     display: -webkit-box;
     display: -webkit-flex;
@@ -401,4 +361,4 @@ Para tama├▒o Grande y Extra grande (TABLET)
   .texto-encabezado p {
     font-size: 1.2rem; } }
 
-/*# sourceMappingURL=estilos-nosotros.css.map */
+/*# sourceMappingURL=cursos.css.map */

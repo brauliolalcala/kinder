@@ -3,14 +3,14 @@
     <section class="bienvenido">
         <div class="texto-encabezado container text-center">
 
-            <h1 class="display-4">Formación integral para tu familia</h1>
-            <p>Potencializamos las habilidades y fortalecemos las debilidades de nuestros alumnos</p>
-            <button type="button" class="btn btn-primary btn-lg btn-inicio"><a href="/contacto">Ponte en Contacto</a></button>
+            <h1 class="display-4 wow bounceInLeft">Formación integral para tu familia</h1>
+            <p class="wow bounceInRight">Potencializamos las habilidades y fortalecemos las debilidades de nuestros alumnos</p>
+            <button type="button" class="btn btn-primary btn-lg btn-inicio wow fadeIn" data-wow-duration="5s"><a href="/contacto">Ponte en Contacto</a></button>
 
         </div>
 
-        <div class="flecha-bajar text-center" id="flecha-bajar">
-            <a href="#flecha-bajar"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
+        <div class="flecha-bajar text-center wow bounceInDown" id="flecha-bajar">
+            <a data-scroll href="#flecha-bajar"><i class="fa fa-angle-down" aria-hidden="true"></i></a>
         </div>
 
     </section>
@@ -22,12 +22,11 @@
 
             <div class="row">
                 <div class="col-md-8">
-                    <h2 class="h3 text-center font-weight-bold text-lg-left"> El Mejor Preescolar</h2>
-                    <p>En nuestra institución estamos convencidos que cada niño es diferente y debe crecer a su propio ritmo, por ello contamos con profesoras altamente capacitadas que nos aseguran potencializar las habilidades y fortalecer las debilidades
-                        de cada uno de nuestros alumnos.</p>
-                    <p>Además ofrecemos cursos y talleres sabatinos que podrá disfrutar toda tu familia de manera gratuita.</p>
+                    <h2 class="h3 text-center font-weight-bold text-lg-left wow bounceInRight"> El Mejor Preescolar</h2>
+                    <p class="wow fadeIn" data-wow-duration="4s">En nuestra institución estamos convencidos que cada niño es diferente y debe crecer a su propio ritmo, por ello contamos con profesoras altamente capacitadas que nos aseguran potencializar las habilidades y fortalecer las debilidades de cada uno de nuestros alumnos.</p>
+                    <p class="wow fadeIn" data-wow-duration="4s">Además ofrecemos cursos y talleres sabatinos que podrá disfrutar toda tu familia de manera gratuita.</p>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 wow flipInX" data-wow-duration="4s">
                     <img src="/images/estrella.svg" alt="El mejor preescolar">
                 </div>
 
@@ -45,7 +44,7 @@
             </div>
             <div class="row">
                 <ul class="col-6 col-lg-4 text-lg-left texto-izquierda">
-                    <li>
+                    <li class="wow rotateInUpLeft">
                         <i class="fa fa-graduation-cap" aria-hidden="true"></i>
                         <div class="container texto">
                             <h5>Profesoras altamente capacitadas</h5>
@@ -53,14 +52,14 @@
                         </div>
                     </li>
 
-                    <li>
+                    <li class="wow rotateInUpLeft">
                         <i class="fa  fa-hand-rock-o" aria-hidden="true"></i>
                         <div class="container texto">
                             <h5>Clases de Kempo</h5>
                             <p class="hidden-md-down">Estamos asociados con el Instituto Mexicano de Kempo</p>
                         </div>
                     </li>
-                    <li>
+                    <li class="wow rotateInUpLeft">
                         <i class="fa fa-language" aria-hidden="true"></i>
                         <div class="container texto">
                             <h5>Sistema Bilingüe</h5>
@@ -74,7 +73,7 @@
                 </div>
 
                 <ul class="col-6 col-lg-4 text-lg-right texto-derecha">
-                    <li>
+                    <li class="wow rotateInUpRight">
                         <i class="fa fa-child" aria-hidden="true"></i>
                         <div class="container texto">
                             <h5>Tus hijos, nuestra prioridad</h5>
@@ -82,14 +81,14 @@
                         </div>
                     </li>
 
-                    <li>
-                        <i class="fa fa-desktop" aria-hidden="true"></i>
+                    <li class="wow rotateInUpRight">
+                        <i class="fa fa-desktop rotateMe" aria-hidden="true"></i>
                         <div class="container texto">
                             <h5>Clases de computación</h5>
                             <p class="hidden-md-down">Contamos con equipo de computo para la enseñanza digital de los niños</p>
                         </div>
                     </li>
-                    <li>
+                    <li class="wow rotateInUpRight">
                         <i class="fa fa-users" aria-hidden="true"></i>
                         <div class="container texto">
                             <h5>Cursos</h5>
@@ -101,4 +100,4 @@
         </div>
     </section>
 
-<% include footer.ejs %>
+    <% include footer.ejs %>

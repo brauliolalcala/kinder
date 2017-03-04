@@ -28,7 +28,7 @@
                 </div>
             </div>
 
-            <img src="/images/logo.svg" alt="Logo Preescolar Carlos Pellicer Cámara" class="hidden-md-down col-lg-4 ">
+            <img src="/images/logo.svg" alt="Logo Preescolar Carlos Pellicer Cámara" class="hidden-md-down col-lg-4">
 
             <ul class="col-lg-4 social">
                 <div class="row">
@@ -55,11 +55,36 @@
 <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
 <script src="/javascripts/jquery-3.1.1.min.js"></script>
 <script src="/javascripts/bootstrap.min.js"></script>
+<script src="/javascripts/wow.min.js"></script>
+<script src="/javascripts/smooth-scroll.min.js"></script>
+<script type="text/javascript">
+    new WOW().init();
+    smoothScroll.init();
+
+    /*---------------------------------
+       CABECERA ANIMADA
+     ----------------------------------*/
+    $(window).scroll(function() {
+
+        var nav = $('.encabezado');
+        var scroll = $(window).scrollTop();
+
+        if (scroll >= 100) {
+            nav.addClass("fondo-menu");
+        } else {
+            nav.removeClass("fondo-menu");
+        }
+    });
+
+</script>
+
+
+
 <% for (let i = 0; i < scripts.length; i++) { %>
     <script src="scripts[i]"></script>
-<% }  %>
+    <% }  %>
 
 
-</body>
+        </body>
 
-</html>
+        </html>
