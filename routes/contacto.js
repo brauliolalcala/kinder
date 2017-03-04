@@ -2,15 +2,17 @@ var express = require('express');
 var router = express.Router();
 var nodemailer = require('nodemailer');
 var sanitizer = require('sanitizer');
-var strings = require('node-strings');
 var validator = require('validator');
+var flash = require('connect-flash');
+
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
     res.render('contacto.ejs', {
         'page': 'contacto',
         'estilos': ['/stylesheets/estilos-contacto.css'],
-        'scripts': []
+        'scripts': [],
+        'errors': []
     });
 });
 
@@ -36,15 +38,15 @@ router.post('/send', function(req, res, next) {
 
 
     var errors = req.validationErrors();
-//    console.log(error.bold().red());
 
     if (errors) {
-      console.log(errors);
+        console.log(errors);
+        console.log("'Indice:'" + errors.indexOf({param: 'alumno_insitucion'}));
         res.render('contacto.ejs', {
             errors: errors,
             page: 'contacto',
             estilos: ['/stylesheets/estilos-contacto.css'],
-            scripts: []
+            scripts: [] 
         });
     } else {
         //Enviando el mandarMensaje
@@ -66,7 +68,10 @@ router.post('/send', function(req, res, next) {
             console.log('Message %s sent: %s'.bold(), info.messageId, info.response);
             res.redirect('/index');
         });
+
+        req.flash('succes', 'Se ha enviado la información proporcionada. Gracias por su preferencia.');
     }
+
 });
 
 var transporter = nodemailer.createTransport({
