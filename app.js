@@ -15,7 +15,7 @@ app.set('views', path.join(__dirname, 'public/views'));
 app.set('view engine', 'ejs');
 
 // uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(expressValidator({
@@ -47,11 +47,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 var index = require('./routes/index');
 var nosotros = require('./routes/nosotros');
 var contacto = require('./routes/contacto');
+var sign_in = require('./routes/sign-in');
 
 
 app.use('/', index);
 app.use('/nosotros', nosotros);
 app.use('/contacto', contacto);
+app.use('/iniciarsesion', sign_in);
 
 
 // catch 404 and forward to error handler

@@ -7,13 +7,16 @@ $primario: #1F89C7;
 $secundario: #FF521B;
 $terciario: #FFC21B;
 $texto: #111111;
+
 html {
     font-size: 15px;
 }
+
 body {
     font-family: 'Open Sans', sans-serif;
     color: $texto;
 }
+
 .bienvenido {
     background: url("../images/fondo-encabezado.jpg") no-repeat center top;
     color: #fff;
@@ -23,21 +26,25 @@ body {
     display: flex;
     flex-direction: column;
 }
+
 .encabezado {
     background: $texto;
     color: #fff;
-    padding: 1rem 0 1rem 0;
+    padding: 1rem 0;
     transition: all 1s;
 }
+
 .encabezado .container {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
 }
+
 .encabezado .logo img {
     width: 150px;
     height: auto;
 }
+
 .fondo-menu {
     background: #196c9c;
 }
@@ -51,6 +58,7 @@ body {
     padding: 0.5rem;
     margin: 0;
 }
+
 .boton-menu:focus,
 .boton-sign-in:focus {
     background: transparent;
@@ -61,19 +69,23 @@ body {
     margin: 0;
     outline: 0;
 }
+
 .boton-sign-in,
 .boton-sign-in:focus {
     margin-left: auto;
     margin-right: 0.8rem;
 }
+
 #menu-principal {
     flex: 1 1 100%;
 }
+
 #menu-principal ul {
     list-style: none;
     padding: 0;
     margin: 1rem 0 0;
 }
+
 #menu-principal ul a {
     display: block;
     padding: 0.8rem 0;
@@ -82,6 +94,7 @@ body {
     color: #fff;
     border-top: 1px solid #fff;
 }
+
 #menu-principal ul a:hover,
 #menu-principal ul li.active a {
     display: block;
@@ -92,30 +105,37 @@ body {
     border-top: 1px solid #fff;
     text-decoration: none;
 }
+
 #bloque-buscar p {
     margin-bottom: 0;
 }
+
 #bloque-buscar input {
     margin-top: 10px;
 }
+
 .texto-encabezado {
     flex: 1 1 auto;
     display: flex;
     align-items: center;
 }
+
 .texto-encabezado .btn-primary a {
     color: #fff;
     text-decoration: none;
 }
+
 .texto-encabezado .btn-primary {
     margin-top: 1rem;
     background-color: $primario;
     border-color: $primario;
 }
+
 .texto-encabezado .btn-primary:hover {
     background-color: $secundario;
     border-color: $secundario;
 }
+
 .flecha-bajar a {
     display: inline-block;
     color: #fff;
@@ -126,42 +146,78 @@ body {
     from {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(6px);
     }
+
     to {
         transform: translateY(0);
     }
 }
 
+.iniciarsesion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input.btn.btn-primary.btn-lg.btn-block{
+  width: 100%;
+}
+
+.iniciarsesion form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input#password, input#email{
+  width: 300px;
+  height: 35px;
+  align-self: center;
+}
+.form-group.row{
+  display: flex;
+  flex-direction: column;
+}
+
+.caja a {
+    color: $secundario;
+    font-size: 1rem;
+}
 /*------------------------
 Sección TU MEJOR PREESCOLAR
 ------------------------*/
-
 .mejor-preescolar {
     background: $primario;
     color: #fff;
 }
+
 .mejor-preescolar p {
     text-align: justify;
 }
+
 .rotateMe {
     transition: transform 1s ease-out;
 }
+
 .rotateMe:hover {
     transform: rotate(360deg);
 }
-
 /*--------------------------------
 Sección Tu mejor Elección
 --------------------------------*/
-
 .tu-mejor-eleccion span {
     color: $secundario;
 }
+
 .tu-mejor-eleccion ul {
     list-style: none;
 }
+
 .tu-mejor-eleccion ul .fa {
     font-size: 2rem;
     background: $primario;
@@ -170,53 +226,61 @@ Sección Tu mejor Elección
     height: 4.5rem;
     line-height: 4.5rem;
     color: #fff;
-    transition: all 1s ease
+    transition: all 1s ease;
 }
+
 .tu-mejor-eleccion ul li:hover .fa {
     transform: rotateY(360deg);
     transform-style: preserve-3d;
     background: #196c9c;
 }
+
 .tu-mejor-eleccion ul h5 {
     font-weight: bold;
     margin-top: 0.8rem;
 }
+
 .tu-mejor-eleccion ul li {
     min-height: 9rem;
 }
+
 .tu-mejor-eleccion a {
     color: #fff;
     text-decoration: none;
 }
+
 .tu-mejor-eleccion button:hover {
     color: #fff;
     background: $secundario;
     border-color: $secundario;
 }
+
 .imagen-medio {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-
 /*------------------------
 Sección Pie de Página
 ------------------------*/
-
 .pie-de-pagina {
     background: $primario;
     color: #fff;
 }
+
 .pie-de-pagina h4 {
     font-family: 'Arima Madurai', cursive;
     font-size: 1.5rem;
 }
+
 .pie-de-pagina ul {
     list-style: none;
 }
+
 .pie-de-pagina ul i {
     font-size: 3rem;
 }
+
 .pie-de-pagina span {
     font-size: 1.2rem;
     font-weight: bold;
@@ -224,46 +288,61 @@ Sección Pie de Página
     flex-direction: column;
     align-items: center;
 }
+
 .pie-de-pagina p {
     margin-top: 0;
     margin-bottom: 0;
 }
+
 .pie-de-pagina a {
     text-decoration: none;
     color: #fff;
 }
+
 .telefono {
     display: flex;
     justify-content: center;
     background: $secundario;
 }
+
 .telefono:hover {
     display: flex;
     justify-content: center;
     background: $terciario;
     border-color: $terciario;
 }
+
 .telefono .fa {
     font-size: 1.5rem;
 }
+
 .telefono span {
     margin-left: 1rem;
 }
+
 .boton-telefono {
     display: flex;
     justify-content: center;
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
+
 .texto-encabezado {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-
 /* -----------------------------------
 Para tamaño Medio (TABLET)
 ------------------------------------*/
+.caja a {
+    color: $secundario;
+    font-size: 1.2rem;
+}
+.caja{
+  font-size: 1.3rem;
+}
+
 
 @media (min-width:768px) {
     .iniciar-sesion,
@@ -275,6 +354,7 @@ Para tamaño Medio (TABLET)
         font-size: 1.3rem;
         outline: 0;
     }
+
     .bienvenido {
         background: url("../images/fondo-encabezado-lg.jpg") no-repeat center top;
         color: #fff;
@@ -285,16 +365,15 @@ Para tamaño Medio (TABLET)
         flex-direction: column;
     }
 }
-
 /* -----------------------------------
 Para tamaño Grande y Extra grande (TABLET)
 ------------------------------------*/
-
 @media (min-width:992px) {
     #menu-principal {
         height: 100% !important;
         display: block;
     }
+
     #menu-principal ul a {
         display: block;
         padding: 0.8rem 0.8rem 0.6rem;
@@ -307,6 +386,7 @@ Para tamaño Grande y Extra grande (TABLET)
         margin-right: 0.5rem;
         transition: all 0.3s ease;
     }
+
     #menu-principal ul a:hover {
         display: block;
         padding: 0.8rem 0.8rem 0.6rem;
@@ -320,6 +400,7 @@ Para tamaño Grande y Extra grande (TABLET)
         border-bottom: 5px solid $primario;
         margin-right: 0.5rem;
     }
+
     #menu-principal ul li.active a {
         display: block;
         padding: 0.8rem 0.8rem 0.6rem;
@@ -333,23 +414,28 @@ Para tamaño Grande y Extra grande (TABLET)
         font-weight: bold;
         margin-right: 0.5rem;
     }
+
     ul.menu-principal {
         display: flex;
         margin: 0;
     }
+
     button.hidden-sm-down.iniciar-sesion.collapsed {
         height: 100% !important;
         flex: 1 1 100%;
     }
+
     nav#menu-principal {
         flex: 0 1 auto;
         margin-left: auto;
     }
+
     #menu-principal ul {
         list-style: none;
         padding: 0;
         margin: 0;
     }
+
     form#bloque-buscar {
         order: 2;
         background: #111111;
@@ -360,13 +446,16 @@ Para tamaño Grande y Extra grande (TABLET)
         top: 3.5rem;
         font-size: 1.3rem;
     }
+
     .container.form-group input {
         font-size: 1.2rem;
     }
+
     .tu-mejor-eleccion ul li {
         min-height: 9rem;
         display: flex;
     }
+
     .tu-mejor-eleccion ul .fa {
         font-size: 2rem;
         background: #1f89c7;
@@ -378,20 +467,21 @@ Para tamaño Grande y Extra grande (TABLET)
         text-align: center;
         flex: 1 0 auto;
     }
+
     .tu-mejor-eleccion .texto-izquierda li i {
         order: 2;
     }
+
     .tu-mejor-eleccion ul h5 {
         margin-top: 0;
     }
+
     .social {
         display: flex;
         margin: auto 0;
         justify-content: flex-end;
     }
-    .texto-encabezado .btn-primary {
-        margin-top: 10rem;
-    }
+
     .texto-encabezado p {
         font-size: 1.2rem;
     }

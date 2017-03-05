@@ -4,7 +4,7 @@
 
         <div class="container texto-encabezado">
             <h2 class="wow bounceInDown">Contactanos</h2>
-            <p class="wow flipInX" data-wow-delay="0.6s">Haz una pregunta o agenda una cita</p>
+            <p class="wow flipInX" data-wow-delay="0.6s">Haz una pregunta</p>
         </div>
 
     </section>
@@ -16,7 +16,7 @@
 
                 <ul class="list-group">
                     <li class="list-group-item list-group-item-action list-group-item-danger">
-                        <a href="#<%= errors[i].param %>">
+                        <a data-scroll href="#<%= errors[i].param %>">
                             <%= errors[i].msg %>
                         </a>
                     </li>
@@ -32,7 +32,7 @@
         </div>
 
         <div class="container inicio-formulario">
-            <form class="formulario-letras" action="/contacto/send" method="post">
+            <form class="formulario-letras" action="/contacto" method="post">
                 <div class="form-group row " id="nombre_padre">
                     <label for="nombre-padre" class="col-sm-2 form-control-label">Nombre del Tutor</label>
                     <div class="col-sm-10">

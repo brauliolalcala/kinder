@@ -16,12 +16,12 @@ router.get('/', function(req, res, next) {
     });
 });
 
-router.post('/send', function(req, res, next) {
+router.post('/', function(req, res, next) {
 
     var form = {
         'nombre_padre': sanitizer.escape(req.body.nombre_padre),
         'nombre_alumno': sanitizer.escape(req.body.nombre_alumno),
-        'alumno_insitucion': sanitizer.escape(req.body.alumno_insitucion),
+        'alumno_institucion': sanitizer.escape(req.body.alumno_institucion),
         'email': sanitizer.escape(req.body.email),
         'telefono': sanitizer.escape(req.body.telefono),
         'asunto': sanitizer.escape(req.body.asunto),
@@ -34,24 +34,24 @@ router.post('/send', function(req, res, next) {
     req.checkBody('nombre_padre', 'Por favor introduzca el nombre del padre o tutor').notEmpty();
     req.checkBody('email', 'Por favor introduzca un correo').notEmpty();
     req.checkBody('email', 'El correo especificado no es válido').isEmail();
-    req.checkBody('alumno_insitucion', 'Por favor conteste esta pregunta').notEmpty();
+    req.checkBody('alumno_institucion', 'Por favor conteste esta pregunta').notEmpty();
 
 
     var errors = req.validationErrors();
 
     if (errors) {
         console.log(errors);
-        console.log("'Indice:'" + errors.indexOf({param: 'alumno_insitucion'}));
+        console.log("'Indice:'" + errors.indexOf({param: 'alumno_institucion'}));
         res.render('contacto.ejs', {
             errors: errors,
             page: 'contacto',
             estilos: ['/stylesheets/estilos-contacto.css'],
-            scripts: [] 
+            scripts: []
         });
     } else {
         //Enviando el mandarMensaje
         var mensaje =
-            '<h1> El Sr.(a) ' + form.nombre_padre + ' ha llenado el formulario de la página web con los siguientes datos </h1>' + '<br>' + '<h3>Nombre del Tutor:' + form.nombre_padre + '</h3>' + '<b>Nombre del Alumno:' + form.nombre_alumno + '</b>' + '<br>' + 'Su hijo ' + '<b>' + form.alumno_insitucion + '</b>' + ' es alumno de nuestra institución.' + '<br>' + 'Correo:' + '<u>' + form.email + '</u>' + '<br>' + 'Teléfono:' + '<b>' + form.telefono + '<b>' + '<br>' + 'Asunto a tratar:' + form.asunto + '<br>' + 'Mensaje:' + form.mensaje;
+            '<h1> El Sr.(a) ' + form.nombre_padre + ' ha llenado el formulario de la página web con los siguientes datos </h1>' + '<br>' + '<h3>Nombre del Tutor:' + form.nombre_padre + '</h3>' + '<b>Nombre del Alumno:' + form.nombre_alumno + '</b>' + '<br>' + 'Su hijo ' + '<b>' + form.alumno_institucion + '</b>' + ' es alumno de nuestra institución.' + '<br>' + 'Correo:' + '<u>' + form.email + '</u>' + '<br>' + 'Teléfono:' + '<b>' + form.telefono + '<b>' + '<br>' + 'Asunto a tratar:' + form.asunto + '<br>' + 'Mensaje:' + form.mensaje;
 
         var mailOptions = {
             from: '"Braulio Uciel" <bu.alvaradoalcala@gmail.com>', // sender address

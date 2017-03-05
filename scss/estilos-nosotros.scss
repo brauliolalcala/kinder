@@ -26,7 +26,8 @@ body {
 .encabezado {
     background: $texto;
     color: #fff;
-    padding: 0.5rem 0;
+    padding: 1rem 0 1rem 0;
+    transition: all 1s;
 }
 .encabezado .container {
     display: flex;
@@ -37,6 +38,11 @@ body {
     width: 150px;
     height: auto;
 }
+
+.fondo-menu {
+    background: #196c9c;
+}
+
 .boton-menu,
 .boton-sign-in {
     background: transparent;

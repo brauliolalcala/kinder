@@ -6,19 +6,19 @@ body {
   font-family: 'Open Sans', sans-serif;
   color: #111111; }
 
-.imagen-nosotros {
-  background: url("../images/fondo-nosotros-lg.jpg") no-repeat center top;
+.bienvenido {
+  background: url("../images/fondo-encabezado.jpg") no-repeat center top;
   color: #fff;
   background-size: cover;
   background-attachment: fixed;
-  height: 50vh;
+  height: 100vh;
   display: flex;
   flex-direction: column; }
 
 .encabezado {
   background: #111111;
   color: #fff;
-  padding: 1rem 0 1rem 0;
+  padding: 1rem 0;
   transition: all 1s; }
 
 .encabezado .container {
@@ -57,22 +57,6 @@ body {
   margin-left: auto;
   margin-right: 0.8rem; }
 
-#bloque-buscar p {
-  margin-bottom: 0; }
-
-#bloque-buscar input {
-  margin-top: 10px; }
-
-.texto-encabezado {
-  flex: 1 1 auto;
-  display: flex;
-  align-items: center; }
-
-ul.menu-principal {
-  display: flex;
-  flex-direction: column;
-  margin: 0; }
-
 #menu-principal {
   flex: 1 1 100%; }
 
@@ -105,43 +89,128 @@ ul.menu-principal {
 #bloque-buscar input {
   margin-top: 10px; }
 
-.breadcrumb {
-  background: #1f89c7;
-  font-weight: bold; }
+.texto-encabezado {
+  flex: 1 1 auto;
+  display: flex;
+  align-items: center; }
 
-.breadcrumb-item a {
-  text-decoration: none;
+.texto-encabezado .btn-primary a {
+  color: #fff;
+  text-decoration: none; }
+
+.texto-encabezado .btn-primary {
+  margin-top: 1rem;
+  background-color: #1f89c7;
+  border-color: #1f89c7; }
+
+.texto-encabezado .btn-primary:hover {
+  background-color: #ff521b;
+  border-color: #ff521b; }
+
+.flecha-bajar a {
+  display: inline-block;
+  color: #fff;
+  font-size: 4rem;
+  animation: flecha-animada 2s ease-in-out infinite; }
+
+@keyframes flecha-animada {
+  from {
+    transform: translateY(0); }
+
+  50% {
+    transform: translateY(6px); }
+
+  to {
+    transform: translateY(0); } }
+
+.iniciarsesion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+input.btn.btn-primary.btn-lg.btn-block {
+  width: 100%; }
+
+.iniciarsesion form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+input#password, input#email {
+  width: 300px;
+  height: 35px;
+  align-self: center; }
+
+.form-group.row {
+  display: flex;
+  flex-direction: column; }
+
+.caja a {
+  color: #ff521b;
+  font-size: 1rem; }
+
+/*------------------------
+Sección TU MEJOR PREESCOLAR
+------------------------*/
+.mejor-preescolar {
+  background: #1f89c7;
   color: #fff; }
 
-.trabajamos h2 {
-  font-weight: bold; }
-
-.educacion .titulo {
-  border-top: 2px solid #1f89c7;
-  border-bottom: 2px solid #1f89c7;
-  margin: 1rem 0;
-  padding: 1rem 0; }
-
-.educacion .container h2 {
-  display: inline;
-  font-weight: bold; }
-
-ul p {
+.mejor-preescolar p {
   text-align: justify; }
 
-.educacion i {
-  font-size: 2rem;
-  margin-top: 2rem; }
+.rotateMe {
+  transition: transform 1s ease-out; }
 
-.educacion ul li {
+.rotateMe:hover {
+  transform: rotate(360deg); }
+
+/*--------------------------------
+Sección Tu mejor Elección
+--------------------------------*/
+.tu-mejor-eleccion span {
+  color: #ff521b; }
+
+.tu-mejor-eleccion ul {
   list-style: none; }
 
-.educacion ul li h3 {
-  margin-top: 2rem;
-  text-decoration: underline; }
+.tu-mejor-eleccion ul .fa {
+  font-size: 2rem;
+  background: #1f89c7;
+  border-radius: 50%;
+  width: 4.5rem;
+  height: 4.5rem;
+  line-height: 4.5rem;
+  color: #fff;
+  transition: all 1s ease; }
 
-.educacion p.text-justify {
-  margin-top: 2rem; }
+.tu-mejor-eleccion ul li:hover .fa {
+  transform: rotateY(360deg);
+  transform-style: preserve-3d;
+  background: #196c9c; }
+
+.tu-mejor-eleccion ul h5 {
+  font-weight: bold;
+  margin-top: 0.8rem; }
+
+.tu-mejor-eleccion ul li {
+  min-height: 9rem; }
+
+.tu-mejor-eleccion a {
+  color: #fff;
+  text-decoration: none; }
+
+.tu-mejor-eleccion button:hover {
+  color: #fff;
+  background: #ff521b;
+  border-color: #ff521b; }
+
+.imagen-medio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
 
 /*------------------------
 Sección Pie de Página
@@ -152,8 +221,7 @@ Sección Pie de Página
 
 .pie-de-pagina h4 {
   font-family: 'Arima Madurai', cursive;
-  font-size: 1.5rem;
-  text-align: center; }
+  font-size: 1.5rem; }
 
 .pie-de-pagina ul {
   list-style: none; }
@@ -204,12 +272,16 @@ Sección Pie de Página
   flex-direction: column;
   justify-content: center; }
 
-.trabajamos {
-  margin-top: 2rem; }
-
 /* -----------------------------------
 Para tamaño Medio (TABLET)
 ------------------------------------*/
+.caja a {
+  color: #ff521b;
+  font-size: 1.2rem; }
+
+.caja {
+  font-size: 1.3rem; }
+
 @media (min-width: 768px) {
   .iniciar-sesion,
   .iniciar-sesion:focus {
@@ -220,12 +292,12 @@ Para tamaño Medio (TABLET)
     font-size: 1.3rem;
     outline: 0; }
 
-  .imagen-nosotros {
-    background: url("../images/fondo-nosotros-lg.jpg") no-repeat center top;
+  .bienvenido {
+    background: url("../images/fondo-encabezado-lg.jpg") no-repeat center top;
     color: #fff;
     background-size: cover;
     background-attachment: fixed;
-    height: 50vh;
+    height: 100vh;
     display: flex;
     flex-direction: column; } }
 /* -----------------------------------
@@ -276,8 +348,11 @@ Para tamaño Grande y Extra grande (TABLET)
 
   ul.menu-principal {
     display: flex;
-    flex-direction: row;
     margin: 0; }
+
+  button.hidden-sm-down.iniciar-sesion.collapsed {
+    height: 100% !important;
+    flex: 1 1 100%; }
 
   nav#menu-principal {
     flex: 0 1 auto;
@@ -297,6 +372,30 @@ Para tamaño Grande y Extra grande (TABLET)
     border-radius: 15px;
     top: 3.5rem;
     font-size: 1.3rem; }
+
+  .container.form-group input {
+    font-size: 1.2rem; }
+
+  .tu-mejor-eleccion ul li {
+    min-height: 9rem;
+    display: flex; }
+
+  .tu-mejor-eleccion ul .fa {
+    font-size: 2rem;
+    background: #1f89c7;
+    border-radius: 50%;
+    width: 4.5rem;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    color: #fff;
+    text-align: center;
+    flex: 1 0 auto; }
+
+  .tu-mejor-eleccion .texto-izquierda li i {
+    order: 2; }
+
+  .tu-mejor-eleccion ul h5 {
+    margin-top: 0; }
 
   .social {
     display: flex;
